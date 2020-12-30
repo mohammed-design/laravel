@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "99f4461f-8c4b-44c0-b049-d6635baeb91f",
+		"name": "rest-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"name\": \"Mohammed\",\r\n\t\"email\": \"Mohammed@gmail.com\",\r\n\t\"password\": \"123456789\",\r\n\t\"password_confirmation\": \"123456789\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/auth/signup?Content-Type=application/json&X-Requested-With=XMLHttpRequest",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					],
+					"query": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-Requested-With",
+							"value": "XMLHttpRequest"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"email\": \"mhmd@hotmail.com\",\r\n\t\"password\": \"123456789\",\r\n\t\"remember_me\": true\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/auth/login?Content-Type=application/json&X-Requested-With=XMLHttpRequest",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					],
+					"query": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-Requested-With",
+							"value": "XMLHttpRequest"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODgzMWYyNDRkYmVmMWU4MWZlZTU4YjlhZWMwMjUxNDQ3YWQ2ZjFmMWNmMGU4YzI2ZDM0OGZmM2UxNjk5NzFhNTRjMGY3OTY0OTNlZjUwMjkiLCJpYXQiOjE1OTA0NTIyMTgsIm5iZiI6MTU5MDQ1MjIxOCwiZXhwIjoxNjIxOTg4MjE4LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.saQGzd97sDlZBMOkAZejVDCpFpQ9xbrutdZSgFgY7uZi88smNwW-BecV3UMjvVxjX2EykvylBP7MxLLA4rdACv6sDRrl42UwB9j5-gJkLB-WGtj9IpqSK4DnEGokv3zEY2Z6IhZvN5K68SJJR9yjt8vRjQrlSXoeaJoh2nIMoC_lTDTRq_SmWeKJUd9yJBYmAIks6xcyx-t9VADEjBIBl-gT4N6F8ixI5j88gnmeGDtOVLx48aRwmgWGPeaC6_hw2h36bxlBHsaXArhtsdzdsBm2eEoS9loBEbg19uSOh9oj2qCkT9TG5flEVXG3s7r_vhaT7716Z0Oj6wLo-C403eHMNe3zdHACpnwW19gfnpYhuUrXeh9UotYIzw7Qz0hGUyPAyngVONqXNomM1clf_vuovFnJS57-a_JfG0beK3lzsp1JWr40Y8rk9TbB6h7fwAsNaQa5cLTmRqz0Gb7iPKPJIENAJC4y6E0G4Pz0sdQONVlP1D5c-H127cITJ68_vPIKcRKKI5zw_5BGQ4JuglNq5LrBja5YLo9ldd0vGSPxS6gVHukyIjgaG8iyDyrgswkgr_e1fqk-nUEgjZMvsmh061Zfs8L06JIVnqhLAiXZ8TMcyLU9-il9qb6aLnVXG64QnMEHwWsRRR6HQCP-jeC3mO9hSyDwGKWZUZLFUps",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/auth/logout?Content-Type=application/json&X-Requested-With=XMLHttpRequest",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"logout"
+					],
+					"query": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-Requested-With",
+							"value": "XMLHttpRequest"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "application/json",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "Content-Type",
+				"type": "string"
+			}
+		]
+	}
+}
